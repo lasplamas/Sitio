@@ -1,0 +1,20 @@
+<?php
+
+	class Controller{
+
+	      public function index(){
+
+	      }//End of index function
+
+	      public function edit( $id ){
+
+	      }//End of edit function
+
+	      public function save(  ){
+
+	      }//End of save function
+	      
+	}//End of Controller Class
+
+
+?>

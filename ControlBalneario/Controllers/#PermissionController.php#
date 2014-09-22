@@ -1,0 +1,13 @@
+<?php
+	require_once $_SERVER['DOCUMENT_ROOT'].'/ControlBalneario/Models/Permission.php';
+
+	/***
+	* PermissionController Class
+	* 
+	********************************/
+	class PermissionController extends Controller{
+	      
+	     	      
+
+	}//End of PermissionController Controller
+?>
