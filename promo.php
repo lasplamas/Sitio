@@ -16,7 +16,7 @@
     <![endif]-->
 
     <!-- Icons -->
-    <link href="scripts/icons/general/stylesheets/general_foundicons.css" media="screen" rel="stylesheet" type="text/css" />  
+    <link href="scripts/icons/general/stylesheets/general_foundicons.css" media="screen" rel="stylesheet" type="text/css" />
     <link href="scripts/icons/social/stylesheets/social_foundicons.css" media="screen" rel="stylesheet" type="text/css" />
     <!--[if lt IE 8]>
         <link href="scripts/icons/general/stylesheets/general_foundicons_ie7.css" media="screen" rel="stylesheet" type="text/css" />
@@ -40,39 +40,7 @@
 <body id="pageBody">
 
 <div id="decorative2">
-    <div class="container">
-
-        <div class="divPanel topArea notop nobottom">
-            <div class="row-fluid">
-                <div class="span12">
-
-                    <div id="divLogo" class="pull-left">
-                        <a href="index.html" id="divSiteTitle">Balneario Las Palmas</a><br />
-                        <a href="index.html" id="divTagLine">La mejor experiencia 100% familiar</a>
-                    </div>
-
-                    <div id="divMenuRight" class="pull-right">
-                    <div class="navbar">
-                        <button type="button" class="btn btn-navbar-highlight btn-large btn-primary" data-toggle="collapse" data-target=".nav-collapse">
-                            MENÚ <span class="icon-chevron-down icon-white"></span>
-                        </button>
-                        <div class="nav-collapse collapse">
-                            <ul class="nav nav-pills ddmenu">
-                                <li class="dropdown active"><a href="index.php">Inicio</a></li>
-				<li class="dropdown"><a href="about.html">Precios</a></li>
-				<li class="dropdown"><a href="index.php">Ubicación</a></li>
-                                <li class="dropdown"><a href="promo.php">Promociones</a></li>
-                                <li class="dropdown"><a href="contact.php">Contacto</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
-    </div>
+    <?php include('header.php');?>
 </div>
 
 <div id="contentOuterSeparator"></div>
@@ -83,7 +51,7 @@
 
         <div class="breadcrumbs">
                 <a href="index.html">Home</a> &nbsp;/&nbsp; <span>Gallery</span>
-            </div> 
+            </div>
 
         <div class="row-fluid">
                 <div class="span12">
@@ -93,132 +61,47 @@
                     <div id="gridArea">
                         <ul id="tiles">
                         <?php
-			   
+				$promos = array();
+				array_push( $promos, array(
+					'title' => 'Dos por uno en niños!!!',
+					'image' => 'image',
+					'date' => 'Valido 30 de marzo a 5 de abril',
+					'author' => '',
+					'description' => 'Ahora en semana santa niños entran dos por uno!!!'
+				));
+				array_push( $promos, array(
+					'title' => 'title',
+					'image' => 'image',
+					'date' => 'date',
+					'author' => 'author',
+					'description' => 'description, des des des des de sdasdfasdfalsdkfalksdjfalkjsdflkajsdfkljasndfk'
+				));
+				array_push( $promos, array(
+					'title' => 'title',
+					'image' => 'image',
+					'date' => 'date',
+					'author' => 'author',
+					'description' => 'description, des des des des de sdasdfasdfalsdkfalksdjfalkjsdflkajsdfkljasndfk'
+				));
+				array_push( $promos, array(
+					'title' => 'title',
+					'image' => 'image',
+					'date' => 'date',
+					'author' => 'author',
+					'description' => 'description, des des des des de sdasdfasdfalsdkfalksdjfalkjsdflkajsdfkljasndfk'
+				));
+
+				foreach( $promos as $p ){
+					print( '<li>' );
+					print( '<a href="styles/thumbs/sticky_800.jpg" title="Sticky" rel="prettyPhoto[gallery1]">' );
+					print( '<img src="styles/thumbs/sticky_350.jpg" alt="Sticky" title="Sticky"/></a>' );
+					print( '<div class="meta"><span>'.$p['date'].'</span><span class="pull-right">'.$p['author'].'</span></div>' );
+					print( '<h4><a href="#">'.$p['title'].'</a></h4>' );
+					print( '<p>'.$p['description'].'</p>' );
+					print( '</li>' );
+				}
 			   ?>
-			  <li>
-                            <a href="styles/thumbs/sticky_800.jpg" title="Sticky" rel="prettyPhoto[gallery1]"><img src="styles/thumbs/sticky_350.jpg" alt="Sticky" title="Sticky"/></a>
-                            <div class="meta"><span>7 minutes ago</span><span class="pull-right">By Bob</span></div>
-                            <h4><a href="#">New photo</a></h4>
-                            <p>A sample photo with short description. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                        </li>            
-                        <li>
-                            <a href="styles/thumbs/egg_800.jpg" title="Egg" rel="prettyPhoto[gallery1]"><img src="styles/thumbs/egg_350.jpg" alt="Egg" title="Egg"/></a>
-                            <div class="meta"><span>7 days ago</span><span class="pull-right">By Bob</span></div>
-                            <h4><a href="#">Sample photo with long description</a></h4>
-                            <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. 
-                            <br /><a href="#" class="more_link">Read More</a></p></li>
-                        <li>
-                            <a href="styles/thumbs/earrings_800.jpg" title="Earrings" rel="prettyPhoto[gallery1]"><img src="styles/thumbs/earrings_350.jpg"  alt="Earrings" title="Earrings"/></a>
-                            <div class="meta"><span>7 days ago</span><span class="pull-right">By Bob</span></div>
-                            <h4><a href="#">Earrings</a></h4>
-                            <p>When an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-                            <br /><a href="#" class="more_link">Read More</a></p></li>
-                        <li>
-                            <article class="flex-video">
-                                <iframe width="560" height="315" src="http://player.vimeo.com/video/47911018" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-                            </article>   
-                            <div class="meta"><span>7 days ago</span><span class="pull-right">By Bob</span></div>
-                            <h4><a href="#">Vimeo video embed</a></h4>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                            </p>
-                        </li>  
-                        <li>                
-                            <div class="meta"><span>7 days ago</span><span class="pull-right">By Bob</span></div>
-                            <h4><a href="#">Sample short text</a></h4>
-                            <p>A sample short text post with no 'Read More' link.
-                            </p></li>
-                        <li>
-                            <a href="styles/thumbs/butterfly_800.jpg" title="Butterfly" rel="prettyPhoto[gallery1]"><img src="styles/thumbs/butterfly_350.jpg" alt="Butterfly" title="Butterfly"/></a>
-                            <div class="meta"><span>7 days ago</span><span class="pull-right">By Bob</span></div>
-                            <h4><a href="#">Butterfly</a></h4>
-                            <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                            <br /><a href="#" class="more_link">Read More</a></p></li>
-                        <li>
-                            <img src="styles/thumbs/orange_350.jpg" alt="Orange" title="Orange"/>
-                            <div class="meta"><span>7 days ago</span><span class="pull-right">By Bob</span></div>
-                            <h4><a href="#">Sample photo with no lightbox</a></h4>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p></li>
-                        <li>                
-                            <div class="meta"><span>7 days ago</span><span class="pull-right">By Bob</span></div>
-                            <h4><a href="#">Sample quote</a></h4>                
-                            <blockquote>
-	                            <p>"Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s."</p>
-	                            <small>by Author</small>
-                            </blockquote>
-                            </li>
-                        <li>
-                            <a href="styles/thumbs/painted-wood_800.jpg" title="Painted Wood" rel="prettyPhoto[gallery1]"><img src="styles/thumbs/painted-wood_350.jpg" alt="Painted Wood" title="Painted Wood"/></a>
-                            <div class="meta"><span>7 days ago</span><span class="pull-right">By Bob</span></div>
-                            <h4><a href="#">Painted Wood</a></h4>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                            <br /><a href="#" class="more_link">Read More</a></p></li>
-                        <li>
-                            <a href="styles/thumbs/spiral_800.jpg" title="Spiral" rel="prettyPhoto[gallery1]"><img src="styles/thumbs/spiral_350.jpg" alt="Spiral" title="Spiral"/></a>
-                            <div class="meta"><span>7 days ago</span><span class="pull-right">By Bob</span></div>
-                            <h4><a href="#">Sample photo with no description</a></h4>
-                            </li>
-                        <li>
-                            <a href="styles/thumbs/puzzle_800.jpg" title="Puzzle" rel="prettyPhoto[gallery1]"><img src="styles/thumbs/puzzle_350.jpg" alt="Puzzle" title="Puzzle"/></a>
-                            <div class="meta"><span>7 days ago</span><span class="pull-right">By Bob</span></div>
-                            <h4><a href="#">Puzzle</a></h4>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                            <br /><a href="#" class="more_link">Read More</a></p></li>
-                        <li>
-                            <a href="styles/thumbs/candle_800.jpg" title="Candle" rel="prettyPhoto[gallery1]"><img src="styles/thumbs/candle_350.jpg" alt="Candle" title="Candle"/></a>
-                            <div class="meta"><span>7 days ago</span><span class="pull-right">By Bob</span></div>
-                            <h4><a href="#">Candle</a></h4>
-                            <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
-                            </li>
-                        <li>
-                            <a href="styles/thumbs/calendar_800.jpg" title="Calendar" rel="prettyPhoto[gallery1]"><img src="styles/thumbs/calendar_350.jpg" alt="Calendar" title="Calendar"/></a>
-                            <div class="meta"><span>7 days ago</span><span class="pull-right">By Bob</span></div>
-                            <h4><a href="#">Calendar</a></h4>
-                            <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. 
-                            <br /><a href="#" class="more_link">Read More</a></p></li>
-                        <li>
-                            <a href="styles/thumbs/christmas_800.jpg" title="Christmas" rel="prettyPhoto[gallery1]"><img src="styles/thumbs/christmas_350.jpg" alt="Christmas" title="Christmas"/></a>
-                            <div class="meta"><span>7 days ago</span><span class="pull-right">By Bob</span></div>
-                            <h4><a href="#">Christmas</a></h4>
-                            <p>When an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-                            <br /><a href="#" class="more_link">Read More</a></p></li>
-                        <li>
-                            <a href="styles/thumbs/ships_800.jpg" title="Ships" rel="prettyPhoto[gallery1]"><img src="styles/thumbs/ships_350.jpg" alt="Ships" title="Ships"/></a>
-                            <div class="meta"><span>7 days ago</span><span class="pull-right">By Bob</span></div>
-                            <h4><a href="#">Ships</a></h4>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
-                            <br /><a href="#" class="more_link">Read More</a></p></li>
-                        <li>
-                            <a href="styles/thumbs/card_800.jpg" title="Card" rel="prettyPhoto[gallery1]"><img src="styles/thumbs/card_350.jpg" alt="Card" title="Card"/></a>
-                            <div class="meta"><span>7 days ago</span><span class="pull-right">By Bob</span></div>
-                            <h4><a href="#">Lorem Ipsum</a></h4>
-                            <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. 
-                            <br /><a href="#" class="more_link">Read More</a></p></li>
-                        <li>
-                            <a href="styles/thumbs/fashion_800.jpg" title="Fashion" rel="prettyPhoto[gallery1]"><img src="styles/thumbs/fashion_350.jpg" alt="Fashion" title="Fashion"/></a>
-                            <div class="meta"><span>7 days ago</span><span class="pull-right">By Bob</span></div>
-                            <h4><a href="#">Duis mollis, est non commodo</a></h4>
-                            <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. 
-                            <br /><a href="#" class="more_link">Read More</a></p></li>
-                        <li>
-                            <a href="styles/thumbs/air_800.jpg" title="Air" rel="prettyPhoto[gallery1]"><img src="styles/thumbs/air_350.jpg" alt="Air" title="Air"/></a>
-                            <div class="meta"><span>7 days ago</span><span class="pull-right">By Bob</span></div>
-                            <h4><a href="#">Lorem Ipsum</a></h4>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                            <br /><a href="#" class="more_link">Read More</a></p></li>
-                        <li>
-                            <article class="youtube video flex-video">
-                                <iframe width="560" height="315" src="http://www.youtube.com/embed/e7OYeIXsW60"></iframe>
-                            </article>   
-                            <div class="meta"><span>7 days ago</span><span class="pull-right">By Bob</span></div>
-                            <h4><a href="#">Youtube video embed</a></h4>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                            <br /><a href="#" class="more_link">Read More</a></p>
-                        </li>   
-                        <li>                
-                            <div class="meta"><span>7 days ago</span><span class="pull-right">By Bob</span></div>
-                            <h4><a href="#">Sample long text</a></h4>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                            <br /><a href="#" class="more_link">Read More</a></p></li>   
+
                         </ul>
                     </div>
 
@@ -234,107 +117,11 @@
 
 <div id="divFooter" class="footerArea">
 
-    <div class="container">
+    <?php include('footer.php');?>
 
-        <div class="divPanel">
-
-            <div class="row-fluid">
-                <div class="span3" id="footerArea1">
-                
-                    <h3>About Company</h3>
-
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s.</p>
-                    
-                    <p> 
-                        <a href="#" title="Terms of Use">Terms of Use</a><br />
-                        <a href="#" title="Privacy Policy">Privacy Policy</a><br />
-                        <a href="#" title="FAQ">FAQ</a><br />
-                        <a href="#" title="Sitemap">Sitemap</a>
-                    </p>
-
-                </div>
-                <div class="span3" id="footerArea2">
-
-                    <h3>Recent Blog Posts</h3> 
-                    <p>
-                        <a href="#" title="">Lorem Ipsum is simply dummy text</a><br />
-                        <span style="text-transform:none;">2 hours ago</span>
-                    </p>
-                    <p>
-                        <a href="#" title="">Duis mollis, est non commodo luctus</a><br />
-                        <span style="text-transform:none;">5 hours ago</span>
-                    </p>
-                    <p>
-                        <a href="#" title="">Maecenas sed diam eget risus varius</a><br />
-                        <span style="text-transform:none;">19 hours ago</span>
-                    </p>
-                    <p>
-                        <a href="#" title="">VIEW ALL POSTS</a>
-                    </p>
-
-                </div>
-                <div class="span3" id="footerArea3">
-
-                    <h3>Sample Content</h3> 
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s. 
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s.
-                    </p>
-
-                </div>
-                <div class="span3" id="footerArea4">
-
-                    <h3>Get in Touch</h3>  
-                                                               
-                    <ul id="contact-info">
-                    <li>                                    
-                        <i class="general foundicon-phone icon"></i>
-                        <span class="field">Phone:</span>
-                        <br />
-                        (123) 456 7890 / 456 7891                                                                      
-                    </li>
-                    <li>
-                        <i class="general foundicon-mail icon"></i>
-                        <span class="field">Email:</span>
-                        <br />
-                        <a href="mailto:info@yourdomain.com" title="Email">info@yourdomain.com</a>
-                    </li>
-                    <li>
-                        <i class="general foundicon-home icon" style="margin-bottom:50px"></i>
-                        <span class="field">Address:</span>
-                        <br />
-                        123 Street<br />
-                        12345 City, State<br />
-                        Country
-                    </li>
-                    </ul>
-
-                </div>
-            </div>
-
-            <br /><br />
-            <div class="row-fluid">
-                <div class="span12">
-                    <p class="copyright">
-                        Copyright © 2013 Your Company. All Rights Reserved.
-                    </p>
-
-                    <p class="social_bookmarks">
-                        <a href="#"><i class="social foundicon-facebook"></i> Facebook</a>
-			<a href=""><i class="social foundicon-twitter"></i> Twitter</a>
-			<a href="#"><i class="social foundicon-pinterest"></i> Pinterest</a>
-			<a href="#"><i class="social foundicon-rss"></i> Rss</a>
-                    </p>
-                </div>
-            </div>
-            <br />
-
-        </div>
-
-    </div>
-    
 </div>
 
-<script src="scripts/jquery.min.js" type="text/javascript"></script> 
+<script src="scripts/jquery.min.js" type="text/javascript"></script>
 <script src="scripts/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
 <script src="scripts/default.js" type="text/javascript"></script>
 
