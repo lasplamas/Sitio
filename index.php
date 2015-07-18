@@ -3,11 +3,11 @@
 <head>
     <meta charset="utf-8">
     <title>Balneario Las Palmas -  Bienvenido</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-	<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW"> <!-- Remove this Robots Meta Tag, to allow indexing of site -->
 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Inicio">
+    <meta name="author" content="Balneario las palmas">
+	<link rel="shortcut icon" href="http://i.imgur.com/H40GDK2.png">
     <link href="scripts/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="scripts/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
 
@@ -32,14 +32,41 @@
 
     <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Palatino+Linotype" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Abel" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
 
     <link href="styles/custom.css" rel="stylesheet" type="text/css" />
+
+<!-- Facebook Conversion Code for Balneario Las Palmas -->
+<script>(function() {
+  var _fbq = window._fbq || (window._fbq = []);
+  if (!_fbq.loaded) {
+    var fbds = document.createElement('script');
+    fbds.async = true;
+    fbds.src = '//connect.facebook.net/en_US/fbds.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(fbds, s);
+    _fbq.loaded = true;
+  }
+})();
+window._fbq = window._fbq || [];
+window._fbq.push(['track', '6024972443805', {'value':'0.01','currency':'MXN'}]);
+</script>
+<noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?ev=6024972443805&amp;cd[value]=0.01&amp;cd[currency]=MXN&amp;noscript=1" />
+</noscript>
+<meta name="google-site-verification" content="W9yCg8wNnwt_DGyed1bIMZSlkq2lpV5PABqMkzdu73w" />
 </head>
 <body id="pageBody">
+<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
+	  ga('create', 'UA-59274310-1', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
 <div id="decorative2">
    <?php include('header.php');?>
 </div>
@@ -56,7 +83,7 @@
                         <div id="divHeaderText" class="page-content">
                             <div id="divHeaderLine1">Ambiente 100% familiar!</div><br />
                             <div id="divHeaderLine2">Ven y conoce nuestras instalaciones...</div><br />
-                            <div id="divHeaderLine3"><a class="btn btn-large btn-primary" href="#">Más...</a></div>
+                            <div id="divHeaderLine3"><a class="btn btn-large btn-primary" href="promo.php">Promociones...</a></div>
                         </div>
 
                         <div id="headerSeparator2"></div>
@@ -81,9 +108,9 @@
 
                     <h1>Bienvenido</h1>
 
-                    <p><b>Baleario Las Palmas</b> es una empresa cuyo obejetivo principal es el excelente servicio al cliente.
+                    <p><b>Baleario Las Palmas</b> es una empresa cuyo objetivo principal es el excelente servicio al cliente.
                     Una empresa que por <b>más de 20 años</b>, se ha encargado de mantener dentro de sus instalaciones un <b>ambiente 100% familiar</b>.
-                    Nos encargaremos de que tu familia se la pase de lo mejor en nustras bellas instalaciones.
+                    Nos encargaremos de que tu familia se la pase de lo mejor en nuestras bellas instalaciones.
                     </p>
 
                     <hr style="margin:45px 0 35px" />
@@ -163,7 +190,7 @@
 <script src="scripts/jquery.min.js" type="text/javascript"></script>
 <script src="scripts/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
 <script src="scripts/default.js" type="text/javascript"></script>
-
+<script src="scripts/index.js" type="text/javascript"></script>
 
 <script src="scripts/carousel/jquery.carouFredSel-6.2.0-packed.js" type="text/javascript"></script><script type="text/javascript">$('#list_photos').carouFredSel({ responsive: true, width: '100%', scroll: 2, items: {width: 320,visible: {min: 2, max: 6}} });</script>
 

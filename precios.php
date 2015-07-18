@@ -2,11 +2,11 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Your Name Here - Simple</title>
+    <title>Balneario Las Palmas - Precios</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-
+	<link rel="shortcut icon" href="http://i.imgur.com/H40GDK2.png">
     <link href="scripts/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="scripts/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
 
@@ -50,7 +50,7 @@
     <div class="divPanel page-content">
 
         <div class="breadcrumbs">
-                <a href="index.html">Inicio</a> &nbsp;/&nbsp; <span>Precio</span>
+                <a href="index.php">Inicio</a> &nbsp;/&nbsp; <span>Precio</span>
             </div>
 
         <div class="row-fluid">
@@ -129,6 +129,7 @@
 <script src="scripts/default.js" type="text/javascript"></script>
 
 
+<script src="scripts/index.js" type="text/javascript"></script>
 
 
 

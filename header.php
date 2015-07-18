@@ -5,9 +5,9 @@
                 <div class="span12">
 
                     <div id="divLogo" class="pull-left">
-                        <img src="http://i.imgur.com/H40GDK2.png" alt="Site Name" title="Site Name" style="width:60px;height:50px;" /></a>
-			<a href="index.html" id="divSiteTitle" style="font-size:25px;">Balneario Las Palmas</a><br />
-                        <a href="index.html" id="divTagLine">La mejor experiencia 100% familiar</a>
+                        <img src="http://i.imgur.com/H40GDK2.png" alt="Balenario Las Palamas" title="Balneario Las Palmas" style="width:60px;height:50px;" /></a>
+			<a href="index.php" id="divSiteTitle" style="font-size:25px;">Balneario Las Palmas</a><br />
+                        <a href="index.php" id="divTagLine">La mejor experiencia 100% familiar</a>
                     </div>
 
                     <div id="divMenuRight" class="pull-right">
@@ -23,8 +23,8 @@
                                     	<ul class="dropdown-menu">
 				            	<li><a href="precios.php">Generales</a></li>
 				            	<li><a href="hosp.php">Cabañas</a></li>
-				            	<li><a href="rentas.php">Rentas</a></li>
-				            	<li><a href="restaurante.php">Restaurante</a></li>
+				            	<!------<li><a href="rentas.php">Rentas</a></li>--->
+				           	<!---<li><a href="restaurante.php">Restaurante</a></li>--->
 					</ul>
                                 </li>
 				<li class="dropdown"><a href="location.php">Ubicación</a></li>

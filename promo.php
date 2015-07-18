@@ -2,11 +2,11 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Promociones</title>
+    <title>Balneario Las Palmas - Promociones</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-
+	<link rel="shortcut icon" href="http://i.imgur.com/H40GDK2.png">
     <link href="scripts/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="scripts/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
 
@@ -50,7 +50,7 @@
     <div class="divPanel page-content">
 
         <div class="breadcrumbs">
-                <a href="index.html">Home</a> &nbsp;/&nbsp; <span>Gallery</span>
+                <a href="index.php">Inicio</a> &nbsp;/&nbsp; <span>Promociones</span>
             </div>
 
         <div class="row-fluid">
@@ -63,38 +63,45 @@
                         <?php
 				$promos = array();
 				array_push( $promos, array(
-					'title' => 'Dos por uno en niños!!!',
-					'image' => 'image',
-					'date' => 'Valido 30 de marzo a 5 de abril',
-					'author' => '',
+					'title' => 'Semana Santa',
+					'image' => 'http://i.imgur.com/ZOKkcpA.jpg',
+					'date' => 'Válido 30 de marzo a 5 de abril',
+					'author' => 'descuento',
+					'description' => 'Ahora en semana santa <b>adultos 50 y niños 25</b>!!!'
+				));
+				array_push( $promos, array(
+					'title' => 'Día del niño',
+					'image' => 'http://i.imgur.com/P97h2Cl.jpg',
+					'date' => 'Válido 30 de marzo a 5 de abril',
+					'author' => '2X1',
 					'description' => 'Ahora en semana santa niños entran dos por uno!!!'
 				));
 				array_push( $promos, array(
-					'title' => 'title',
-					'image' => 'image',
-					'date' => 'date',
-					'author' => 'author',
-					'description' => 'description, des des des des de sdasdfasdfalsdkfalksdjfalkjsdflkajsdfkljasndfk'
+					'title' => 'Día de la madre',
+					'image' => 'http://i.imgur.com/jEG5jD1.jpg',
+					'date' => 'Válido 10 de mayo',
+					'author' => 'gratis',
+					'description' => 'Madres entran GRATIS!!!'
 				));
 				array_push( $promos, array(
-					'title' => 'title',
-					'image' => 'image',
-					'date' => 'date',
-					'author' => 'author',
-					'description' => 'description, des des des des de sdasdfasdfalsdkfalksdjfalkjsdflkajsdfkljasndfk'
+					'title' => 'Día del padre',
+					'image' => 'http://i.imgur.com/xOXEMtT.jpg',
+					'date' => 'Válido 21 de junio',
+					'author' => 'gratis',
+					'description' => 'Padres entran GRATIS!!!!'
 				));
 				array_push( $promos, array(
-					'title' => 'title',
-					'image' => 'image',
-					'date' => 'date',
-					'author' => 'author',
-					'description' => 'description, des des des des de sdasdfasdfalsdkfalksdjfalkjsdflkajsdfkljasndfk'
+					'title' => 'Día del estudiante',
+					'image' => 'http://i.imgur.com/09Gw0XU.jpg',
+					'date' => 'Válido 23 de mayo',
+					'author' => '2X1',
+					'description' => 'Estudiantes entran 2X1'
 				));
 
 				foreach( $promos as $p ){
 					print( '<li>' );
-					print( '<a href="styles/thumbs/sticky_800.jpg" title="Sticky" rel="prettyPhoto[gallery1]">' );
-					print( '<img src="styles/thumbs/sticky_350.jpg" alt="Sticky" title="Sticky"/></a>' );
+					print( '<a href="'.$p['image'].'" title="Sticky" rel="prettyPhoto[gallery1]">' );
+					print( '<img src="'.$p['image'].'" alt="Sticky" title="Sticky"/></a>' );
 					print( '<div class="meta"><span>'.$p['date'].'</span><span class="pull-right">'.$p['author'].'</span></div>' );
 					print( '<h4><a href="#">'.$p['title'].'</a></h4>' );
 					print( '<p>'.$p['description'].'</p>' );
@@ -125,6 +132,7 @@
 <script src="scripts/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
 <script src="scripts/default.js" type="text/javascript"></script>
 
+<script src="scripts/index.js" type="text/javascript"></script>
 
 <script src="scripts/wookmark/js/jquery.wookmark.js" type="text/javascript"></script>
 <script type="text/javascript">$(window).load(function () {var options = {autoResize: true,container: $('#gridArea'),offset: 10};var handler = $('#tiles li');handler.wookmark(options);$('#tiles li').each(function () { var imgm = 0; if($(this).find('img').length>0)imgm=parseInt($(this).find('img').not('p img').css('margin-bottom')); var newHeight = $(this).find('img').height() + imgm + $(this).find('div').height() + $(this).find('h4').height() + $(this).find('p').not('blockquote p').height() + $(this).find('iframe').height() + $(this).find('blockquote').height() + 5;if($(this).find('iframe').height()) newHeight = newHeight+15;$(this).css('height', newHeight + 'px');});handler.wookmark(options);handler.wookmark(options);});</script><script src="scripts/prettyphoto/js/jquery.prettyPhoto.js" type="text/javascript"></script><script type="text/javascript">$("a[rel^='prettyPhoto']").prettyPhoto({social_tools: false});$("a[rel^='prettyPhoto'] img").hover(function(){$(this).animate({opacity:0.7},300)},function(){$(this).animate({opacity:1},300)});</script>

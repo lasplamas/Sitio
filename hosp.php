@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 	<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW"> <!-- Remove this Robots Meta Tag, to allow indexing of site -->
-
+	<link rel="shortcut icon" href="http://i.imgur.com/H40GDK2.png">
     <link href="scripts/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="scripts/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
 
@@ -59,7 +59,7 @@
 
 		 <div class="span12" id="divMain">
 
-		<hr style="margin:45px 0 35px" />
+		<hr />
 
                     <div class="lead">
                         <h2>Ahora con cabañas.</h2>
@@ -120,21 +120,29 @@
                 </div>
             </div>
 
+			<hr>
+
+			<div class="row-fluid">
+		        <div class="span2">
+                    <img src="http://i.imgur.com/FKYJen4.jpg" class="img-polaroid" style="margin:5px 0px 15px;" alt="">   </div>
+                <div class="span10">
+                    <h2>Acampa con tu familia ¡¡¡SIN COSTO!!!</h2>
+                </div>
+            </div>
+
+
 
                 </div>
 
                 <div class="span4 sidebar">
 
                     <div class="sidebox">
-                        <h3 class="sidebox-title">Desfruta de nuestras </h3>
-                        <p>La entrada será gratuita para:</p>
+                        <h3 class="sidebox-title">Reserva tu lugar ya!!!</h3>
+                        <p>Reserva con nosotros y no dejes pasar la oportunidad.</p>
 
                         <h4 class="sidebox-title"></h4>
                           <ul>
-                            <li>Personas de la tercera edad</li>
-                            <li>Personas con discapacidad física y mental</li>
-                            <li>Mujeres embarazadas de más de 5 meses</li>
-                            <li>Niños y niñas menores de 3 años</li>
+                            <li><a href="contact.php">Reserva</a></li>
                           </ul>
 
                     </div>
@@ -160,6 +168,7 @@
 <script src="scripts/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
 <script src="scripts/default.js" type="text/javascript"></script>
 
+<script src="scripts/index.js" type="text/javascript"></script>
 <script src="scripts/carousel/jquery.carouFredSel-6.2.0-packed.js" type="text/javascript"></script><script type="text/javascript">$('#list_photos').carouFredSel({ responsive: true, width: '100%', scroll: 2, items: {width: 320,visible: {min: 2, max: 6}} });</script>
 
 

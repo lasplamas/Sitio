@@ -2,11 +2,11 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Your Name Here - Simple</title>
+    <title>Balneario Las Palmas - Ubicación</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
+    <meta name="description" content="ubicacion">
+    <meta name="author" content="balneario las palmas">
+	<link rel="shortcut icon" href="http://i.imgur.com/H40GDK2.png">
     <link href="scripts/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="scripts/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
 
@@ -16,7 +16,7 @@
     <![endif]-->
 
     <!-- Icons -->
-    <link href="scripts/icons/general/stylesheets/general_foundicons.css" media="screen" rel="stylesheet" type="text/css" />  
+    <link href="scripts/icons/general/stylesheets/general_foundicons.css" media="screen" rel="stylesheet" type="text/css" />
     <link href="scripts/icons/social/stylesheets/social_foundicons.css" media="screen" rel="stylesheet" type="text/css" />
     <!--[if lt IE 8]>
         <link href="scripts/icons/general/stylesheets/general_foundicons_ie7.css" media="screen" rel="stylesheet" type="text/css" />
@@ -36,59 +36,90 @@
     <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
 
     <link href="styles/custom.css" rel="stylesheet" type="text/css" />
+
+	<style>
+		#map-canvas {
+			width: auto;
+			height: 400px;
+		}
+	</style>
+	<script src="https://maps.googleapis.com/maps/api/js"></script>
+
+	<script>
+
+	function initialize() {
+		var mapCanvas = document.getElementById('map-canvas');
+		var mapOptions = {
+			  center: new google.maps.LatLng(23.3432311, -102.9402745),
+			  zoom: 14,
+			  mapTypeId: google.maps.MapTypeId.SATELLITE
+		}
+		var map = new google.maps.Map(mapCanvas, mapOptions)
+		var loc = [
+  			['Balneario Las Palmas', 23.3432311, -102.9402745, 4]
+		];
+		setMarkers(map, loc);
+	}
+
+	function setMarkers(map, locations) {
+		// Add markers to the map
+
+		// Marker sizes are expressed as a Size of X,Y
+		// where the origin of the image (0,0) is located
+		// in the top left of the image.
+
+		// Origins, anchor positions and coordinates of the marker
+		// increase in the X direction to the right and in
+		// the Y direction down.
+		var image = {
+		url: 'https://google-developers.appspot.com/maps/documentation/javascript/examples/full/images/beachflag.png',
+		// This marker is 20 pixels wide by 32 pixels tall.
+		size: new google.maps.Size(20, 32),
+		// The origin for this image is 0,0.
+		origin: new google.maps.Point(0,0),
+		// The anchor for this image is the base of the flagpole at 0,32.
+		anchor: new google.maps.Point(0, 32)
+		};
+		// Shapes define the clickable region of the icon.
+		// The type defines an HTML &lt;area&gt; element 'poly' which
+		// traces out a polygon as a series of X,Y points. The final
+		// coordinate closes the poly by connecting to the first
+		// coordinate.
+		var shape = {
+		coords: [1, 1, 1, 20, 18, 20, 18 , 1],
+			type: 'poly'
+		};
+		for (var i = 0; i < locations.length; i++) {
+			var beach = locations[i];
+			var myLatLng = new google.maps.LatLng(beach[1], beach[2]);
+			var marker = new google.maps.Marker({
+				position: myLatLng,
+				map: map,
+				icon: image,
+				shape: shape,
+				title: beach[0],
+				zIndex: beach[3]
+			});
+		}
+	}
+	google.maps.event.addDomListener(window, 'load', initialize);
+	</script>
 </head>
 <body id="pageBody">
 
+<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-59274310-1', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+
 <div id="decorative2">
-    <div class="container">
-
-        <div class="divPanel topArea notop nobottom">
-            <div class="row-fluid">
-                <div class="span12">
-
-                    <div id="divLogo" class="pull-left">
-                        <a href="index.html" id="divSiteTitle">Your Name Here</a><br />
-                        <a href="index.html" id="divTagLine">Your Tag Line Here</a>
-                    </div>
-
-                    <div id="divMenuRight" class="pull-right">
-                    <div class="navbar">
-                        <button type="button" class="btn btn-navbar-highlight btn-large btn-primary" data-toggle="collapse" data-target=".nav-collapse">
-                            NAVIGATION <span class="icon-chevron-down icon-white"></span>
-                        </button>
-                        <div class="nav-collapse collapse">
-                            <ul class="nav nav-pills ddmenu">
-                                <li class="dropdown"><a href="index.html">Home</a></li>
-								<li class="dropdown"><a href="about.html">About</a></li>
-                                <li class="dropdown active">
-                                    <a href="page.html" class="dropdown-toggle">Page <b class="caret"></b></a>
-                                    <ul class="dropdown-menu">
-                            <li><a href="full.html">Full Page</a></li>
-                            <li><a href="2-column.html">Two Column</a></li>
-                            <li><a href="3-column.html">Three Column</a></li>
-							<li><a href="../documentation/index.html">Documentation</a></li>
-							<li class="dropdown">
-                            <a href="#" class="dropdown-toggle">Dropdown Item &nbsp;&raquo;</a>
-                            <ul class="dropdown-menu sub-menu">
-                            <li><a href="#">Dropdown Item</a></li>
-                            <li><a href="#">Dropdown Item</a></li>
-                            <li><a href="#">Dropdown Item</a></li>
-                            </ul>
-                            </li>
-                            </ul>
-                                </li>
-                                <li class="dropdown"><a href="gallery.html">Gallery</a></li>
-                                <li class="dropdown"><a href="contact.php">Contact</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
-    </div>
+    <?php include('header.php');?>
 </div>
 
 <div id="contentOuterSeparator"></div>
@@ -98,43 +129,39 @@
     <div class="divPanel page-content">
 
         <div class="breadcrumbs">
-                <a href="index.html">Home</a> &nbsp;/&nbsp; <span>2-Column</span>
-            </div> 
+                <a href="index.php">Inicio</a> &nbsp;/&nbsp; <span>Ubicación</span>
+            </div>
 
         <div class="row-fluid">
-			
+
 			<!--Edit Sidebar Content here-->
-                <div class="span3">                    
-                 <h3>Left Sidebar Content</h3>
-                 <p>Lorem Ipsum is simply dummy text of the printing and <a href="#">typesetting industry</a>.</p>
-				 <p> Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s.</p>     
-                
-				
-        <h3>Static Image</h3>        
-          <img src="images/rough-waters.jpg" class="img-polaroid" alt="">
-		  
-			<h3>Another Section</h3>
-                 <p>Lorem Ipsum is simply dummy text of the printing and <a href="#">typesetting industry</a>.</p>
-				 <p> Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s.</p>                 	
-          </div>
-				<!--/End Sidebar Content -->        				
-					                 
+                <div class="span3">
+                 <h3>Encuentranos en...</h3>
+                 <p>Carretera Torreón kilómetro 5</p>
+                 <p>Fresnillo Zacatecas</p>
+
+          <img src="http://i.imgur.com/D1ZBsCD.jpg" class="img-polaroid" alt="">
+
+		<h3>Oficina</h3>
+                <p>Calle Independencia #8A</p>
+                <p>Colonia Centro</p>
+                <p>Fresnillo Zacatecas</p>
+
+	</div>
+				<!--/End Sidebar Content -->
+
             	<!--Edit Main Content Area here-->
                 <div class="span9" id="divMain">
 
-                    <h1>Two Column (left-hand sidebar)</h1>
-					<hr>	
-                    <p>Aliquam a tellus quam. Phasellus sit amet bibendum nunc. Donec lobortis nulla diam, a laoreet nisi rhoncus vitae. Suspendisse tincidunt, nulla sed convallis consectetur, diam enim ultricies nulla, a luctus odio nisi in ligula. Aenean ornare rhoncus fermentum. Suspendisse et enim in nibh dictum blandit et id nisi. Duis mollis, libero id venenatis viverra, metus lacus placerat turpis, at semper orci odio id lectus. Proin fringilla quam porttitor est mattis, id aliquam est laoreet. Nulla congue urna nisi, eu commodo dolor aliquet eget. Donec ullamcorper diam quis porttitor convallis. Aliquam erat volutpat. Phasellus pulvinar sagittis nunc et adipiscing.</p>
-                    <p>Duis facilisis tellus ante, eu sodales neque ornare vitae. Pellentesque laoreet velit diam, quis tempor est fringilla sed. Curabitur in ullamcorper lectus, et gravida mauris. Suspendisse tristique euismod metus, quis facilisis lectus cursus faucibus. Nulla sed leo sed tellus egestas mattis sed id libero. Aenean at scelerisque augue. Phasellus at sem porttitor, auctor metus pharetra, lacinia sapien.</p>
-                    <p>Etiam enim dui, dictum vitae lobortis quis, placerat feugiat leo. Sed commodo elit orci, non tincidunt velit suscipit in. Nulla facilisi. Praesent vel eros tristique, lobortis orci vitae, interdum quam. In hac habitasse platea dictumst. Praesent lobortis iaculis ante, at laoreet est pulvinar vel. Cras vulputate tempus nulla eget venenatis. Suspendisse magna lacus, tincidunt nec pulvinar sit amet, semper quis neque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Cras vehicula volutpat enim, id vehicula dolor porttitor in. Nam vehicula velit erat, eu consectetur elit luctus ut. Aliquam ac convallis enim, et venenatis dui. Maecenas et leo metus. Etiam diam ante, lacinia vitae orci vel, dignissim vestibulum tortor. Aliquam elit sapien, pellentesque eu consectetur et, tempor vitae nisl.</p>		
-                    <p>Donec arcu nisi, euismod vitae facilisis id, pulvinar eget tortor. Nunc lobortis ultrices pellentesque. Sed sollicitudin dapibus erat a interdum. Cras massa mauris, rutrum vel nisi non, malesuada lobortis velit. Fusce eu tellus justo. Donec dictum, purus at adipiscing rhoncus, risus libero bibendum ipsum, mollis vestibulum arcu arcu eget elit. In tempor laoreet ultricies. 
-					Maecenas lacus neque, fermentum in blandit a, mollis in libero. Vivamus ornare eros quis arcu cursus, at luctus nisi accumsan.
-					</p>					
-				</div>	                             
-                    					                  
-				<!--/End Main Content Area here-->	                
-					
-							
+                    <h1>Mapa</h1>
+					<hr>
+
+			<div id="map-canvas"></div>
+		</div>
+
+		<!--/End Main Content Area here-->
+
+
             </div>
 
         <div id="footerInnerSeparator"></div>
@@ -146,110 +173,15 @@
 
 <div id="divFooter" class="footerArea">
 
-    <div class="container">
+    <?php include 'footer.php';?>
 
-        <div class="divPanel">
-
-            <div class="row-fluid">
-                <div class="span3" id="footerArea1">
-                
-                    <h3>About Company</h3>
-
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s.</p>
-                    
-                    <p> 
-                        <a href="#" title="Terms of Use">Terms of Use</a><br />
-                        <a href="#" title="Privacy Policy">Privacy Policy</a><br />
-                        <a href="#" title="FAQ">FAQ</a><br />
-                        <a href="#" title="Sitemap">Sitemap</a>
-                    </p>
-
-                </div>
-                <div class="span3" id="footerArea2">
-
-                    <h3>Recent Blog Posts</h3> 
-                    <p>
-                        <a href="#" title="">Lorem Ipsum is simply dummy text</a><br />
-                        <span style="text-transform:none;">2 hours ago</span>
-                    </p>
-                    <p>
-                        <a href="#" title="">Duis mollis, est non commodo luctus</a><br />
-                        <span style="text-transform:none;">5 hours ago</span>
-                    </p>
-                    <p>
-                        <a href="#" title="">Maecenas sed diam eget risus varius</a><br />
-                        <span style="text-transform:none;">19 hours ago</span>
-                    </p>
-                    <p>
-                        <a href="#" title="">VIEW ALL POSTS</a>
-                    </p>
-
-                </div>
-                <div class="span3" id="footerArea3">
-
-                    <h3>Sample Content</h3> 
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s. 
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s.
-                    </p>
-
-                </div>
-                <div class="span3" id="footerArea4">
-
-                    <h3>Get in Touch</h3>  
-                                                               
-                    <ul id="contact-info">
-                    <li>                                    
-                        <i class="general foundicon-phone icon"></i>
-                        <span class="field">Phone:</span>
-                        <br />
-                        (123) 456 7890 / 456 7891                                                                      
-                    </li>
-                    <li>
-                        <i class="general foundicon-mail icon"></i>
-                        <span class="field">Email:</span>
-                        <br />
-                        <a href="mailto:info@yourdomain.com" title="Email">info@yourdomain.com</a>
-                    </li>
-                    <li>
-                        <i class="general foundicon-home icon" style="margin-bottom:50px"></i>
-                        <span class="field">Address:</span>
-                        <br />
-                        123 Street<br />
-                        12345 City, State<br />
-                        Country
-                    </li>
-                    </ul>
-
-                </div>
-            </div>
-
-            <br /><br />
-            <div class="row-fluid">
-                <div class="span12">
-                    <p class="copyright">
-                        Copyright © 2013 Your Company. All Rights Reserved.
-                    </p>
-
-                    <p class="social_bookmarks">
-                        <a href="#"><i class="social foundicon-facebook"></i> Facebook</a>
-			<a href=""><i class="social foundicon-twitter"></i> Twitter</a>
-			<a href="#"><i class="social foundicon-pinterest"></i> Pinterest</a>
-			<a href="#"><i class="social foundicon-rss"></i> Rss</a>
-                    </p>
-                </div>
-            </div>
-            <br />
-
-        </div>
-
-    </div>
-    
 </div>
 
-<script src="scripts/jquery.min.js" type="text/javascript"></script> 
+<script src="scripts/jquery.min.js" type="text/javascript"></script>
 <script src="scripts/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
 <script src="scripts/default.js" type="text/javascript"></script>
 
+<script src="scripts/index.js" type="text/javascript"></script>
 
 
 
